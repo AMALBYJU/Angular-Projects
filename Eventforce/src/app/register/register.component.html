@@ -1,0 +1,57 @@
+<div style="overflow:hidden">  
+    <div color="white" width="100%">
+        <h2 matLine>Register</h2>
+    </div>
+    <form novalidate #registerForm="ngForm"> 
+      <mat-dialog-content>
+          <mat-form-field style="width:50%">
+            <input matInput type="text" placeholder="Username" [(ngModel)]="user.username" name="username" #username="ngModel" required maxlength="28">
+            <mat-error *ngIf="username.errors?.required">Username is required</mat-error>
+            <mat-error *ngIf="username.errors?.maxlength">Length cannot exceed 28 characters</mat-error>
+          </mat-form-field>
+          <mat-form-field style="width:50%">
+            <input matInput type="password"  placeholder="Password" [(ngModel)]="user.password" name="password" #password="ngModel" required maxlength="35" minlength="8"> 
+            <mat-error *ngIf="password.errors?.required">Password is required</mat-error>
+            <mat-error *ngIf="password.errors?.maxlength">Length cannot exceed 35 characters</mat-error>
+            <mat-error *ngIf="password.errors?.minlength">Minimum length is 8 characters</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Name" [(ngModel)]="user.name" name="name" #name="ngModel" required maxlength="28"> 
+            <mat-error *ngIf="name.errors?.required">First Name is required</mat-error>
+            <mat-error *ngIf="name.errors?.maxlength">First name cannot exceed 28 characters</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Email" [(ngModel)]="user.email" name="email" #email="ngModel" required maxlength="28" email> 
+            <mat-error *ngIf="email.errors?.required">Email is required</mat-error>
+            <mat-error *ngIf="email.errors?.maxlength">Email cannot exceed 28 characters</mat-error>
+            <mat-error *ngIf="email.errors?.email">Please enter a valid email</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Roll number" [(ngModel)]="user.id" name="id" #id="ngModel" required pattern="[0-9]+" maxlength="5"> 
+            <mat-error *ngIf="id.errors?.required">Experience is required</mat-error>
+            <mat-error *ngIf="id.errors?.pattern">Experience should be a number</mat-error>
+            <mat-error *ngIf="id.errors?.maxlength">Maximum length is 5 characters</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Phone" [(ngModel)]="user.phone" name="phone" #phone="ngModel" required maxlength="9" minlength="7"> 
+            <mat-error *ngIf="phone.errors?.required">Phone number is required</mat-error>
+            <mat-error *ngIf="phone.errors?.minlength">Minimum length is 7 characters</mat-error>
+            <mat-error *ngIf="phone.errors?.maxlength">Maximum length is 9 characters</mat-error>
+          </mat-form-field>
+
+              <mat-radio-group [(ngModel)]="user.gender" name="gender" #gender="ngModel">
+                <mat-radio-button value="male">Male</mat-radio-button>
+                <mat-radio-button value="female">Female</mat-radio-button>
+              </mat-radio-group>
+ 
+      </mat-dialog-content>
+      <mat-dialog-actions>
+        <div fxLayout="row">
+          <span fxFlex class="flex-spacer"></span>
+          <button fxFlex mat-button mat-dialog-close>Cancel</button>
+          <button fxFlex mat-button class="background-primary text-floral-white" [disabled]="registerForm.form.invalid" (click)="onRegister()">Register</button>
+        </div>
+      </mat-dialog-actions>
+      
+    </form>
+  </div>

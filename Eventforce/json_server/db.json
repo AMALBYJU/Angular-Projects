@@ -1,0 +1,148 @@
+{
+  "organizers": [
+    {
+      "id": 0,
+      "name": "Amal Byju",
+      "username": "amal",
+      "password": "amal",
+      "gender": "male",
+      "dob": "1998-07-27",
+      "phone": 965884799,
+      "email": "amalbyju98@gmail.com",
+      "club": "IEEE"
+    },
+    {
+      "id": 1,
+      "name": "Rohan Kumar",
+      "username": "rohan",
+      "password": "rohan",
+      "gender": "male",
+      "dob": "1998-09-12",
+      "phone": 965884567,
+      "email": "rohan@gmail.com",
+      "club": "ISTE"
+    },
+    {
+      "id": 2,
+      "name": "Pruthvi Bhatia",
+      "username": "pruthvi",
+      "password": "pruthvi",
+      "gender": "male",
+      "dob": "1998-05-11",
+      "phone": 965656787,
+      "email": "pruthvi@gmail.com",
+      "club": "IET"
+    }
+  ],
+  "students": [
+    {
+      "id": 0,
+      "username": "mayur",
+      "password": "mayur1997",
+      "name": "Mayur",
+      "gender": "male",
+      "dob": "1997-5-14",
+      "phone": 966733345,
+      "email": "mayur@hotmail.com"
+    },
+    {
+      "id": 1,
+      "username": "shreya",
+      "password": "shreya98",
+      "name": "Shreya",
+      "gender": "female",
+      "dob": "1997-7-11",
+      "phone": 966733553,
+      "email": "shreya@gmail.com"
+    },
+    {
+      "id": 2,
+      "username": "rahul",
+      "password": "rahul1998",
+      "name": "Rahul",
+      "gender": "male",
+      "dob": "1998-5-11",
+      "phone": 4536456,
+      "email": "rahul@gmail.com"
+    }
+  ],
+  "admin": {
+    "id": 0,
+    "username": "root",
+    "password": "root"
+  },
+  "events": [
+    {
+      "id": 0,
+      "name": "Linux Installation Drive",
+      "club": "IEEE",
+      "venue": "Seminar Hall, Ground Floor, Main Bldg",
+      "image": null,
+      "category": "Workshop",
+      "org_desc": "IEEE is the world's largest professional association that advances innovation and technological excellence for the benefit of humanity",
+      "event_desc": "This workshop is meant for students who want to install Linux alongside Windows operating system. Required Prerequisites -- Ubuntu 16.04 iso file and Rufus portable",
+      "date": "2018-11-11",
+      "start_time": "16:30",
+      "end_time": "18:30",
+      "max_registrations": 100,
+      "cur_registrations": 1,
+      "students_id": [
+        2
+      ],
+      "comments": [
+        {
+          "author": "Mohan",
+          "rating": 4,
+          "comment": "Very helpful",
+          "date": "2018-07-11"
+        },
+        {
+          "comment": "Great workshop!",
+          "author": "Amal",
+          "rating": 5,
+          "date": "Thu Nov 15 2018 11:29:54 GMT+0530 (India Standard Time)"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Barbarossa",
+      "club": "TEDx NITK Surathkal",
+      "venue": "Silver Jubilee Auditorium",
+      "image": null,
+      "category": "Talk",
+      "org_desc": "TEDxNITKSurathkal is meant to reach out to the students and faculty of NITK, Surathkal, an institute of engineering located in the Western Ghats in Karnataka, India.",
+      "event_desc": "Join us for a history discussion and documentary screening of World at War: Barbarossa",
+      "date": "2018-11-17",
+      "start_time": "18:30",
+      "end_time": "21:00",
+      "max_registrations": 70,
+      "cur_registrations": 0,
+      "students_id": [],
+      "comments": [
+        {
+          "author": "Raj",
+          "rating": 4,
+          "comment": "Great talk!",
+          "date": "2018-09-11"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Movie",
+      "venue": "MSH",
+      "image": "",
+      "category": "gvbjujhbnjhnrfsgiusnigfnr",
+      "org_desc": "We are club members of \nISTE.",
+      "event_desc": "We will be screening 3 movies.",
+      "date": "2018-11-16",
+      "start_time": "13:00",
+      "end_time": "15:00",
+      "max_registrations": 100,
+      "cur_registrations": 0,
+      "students_id": [],
+      "comments": []
+    }
+  ]
+}

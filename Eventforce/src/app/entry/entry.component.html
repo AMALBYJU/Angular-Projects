@@ -1,0 +1,44 @@
+<div class="full-width">
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide class="carousel-cc">
+      <img class="full-width" [src]="images[0]" alt="Random first slide">
+
+        <div class="transparent carousel-text" style="padding:25px;width:700px">
+        <h3 matLine style="color:white;text-align:center"><b>Manage Your Events With Online Event Management Software</b></h3>
+        <p matLine style="color:white;text-align:center">All in One Event Registration & Management Platform</p>
+
+      </div>
+    </ng-template>
+    <ng-template ngbSlide class="carousel-cc">
+        <img class="full-width" [src]="images[1]" alt="Random second slide">
+  
+          <div class="transparent carousel-text" style="padding:25px;width:700px">
+          <h3 matLine style="color:white;text-align:center"><b>View and Manage Registrations</b></h3>
+          <p matLine style="color:white;text-align:center">A dedicated solution used by event planners to design and manage events</p>
+  
+        </div>
+      </ng-template>
+      <ng-template ngbSlide class="carousel-cc">
+          <img class="full-width" [src]="images[2]" alt="Random third slide">
+    
+            <div class="transparent carousel-text" style="padding:25px;width:700px">
+            <h3 matLine style="color:white;text-align:center"><b>See Eventsforce in action</b></h3>
+            <p matLine style="color:white;text-align:center">Our online event management solutions take care of your whole event from planning and registration to post-event analysis and reporting</p>
+    
+          </div>
+      </ng-template>
+  </ngb-carousel>
+  </div>
+
+
+
+      <!-- Title bar -->
+
+      <mat-toolbar style="color:white" class="transparent sticky"><span matLine><b>EVENTSFORCE</b></span>
+        <span class="flex-spacer"></span>
+        <a mat-button >About</a>
+        <a mat-button>Services</a>
+        <a mat-button >Contact</a>
+        <a mat-button (click)="openLoginForm()"><span class="fa fa-sign-in-alt fa-lg"></span>Login</a>
+        <a mat-button (click)="openRegisterForm()"><span class="fa fa-sign-in-alt fa-lg"></span>Register</a>
+      </mat-toolbar>

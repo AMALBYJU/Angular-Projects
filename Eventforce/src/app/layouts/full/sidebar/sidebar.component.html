@@ -1,0 +1,26 @@
+<!-- ============================================================== -->
+<!-- sidebar -->
+<!-- ============================================================== -->
+ <div class="user-profile" style="background: url(assets/images/background/user-info.jpg) no-repeat;">
+    <!-- User profile image -->
+    <div class="profile-img"> <img src="assets/images/users/profile.png" alt="user"> </div>
+    <!-- User profile text-->
+    <!-- ============================================================== -->
+    <!-- Profile - style you can find in header.scss -->
+    <!-- ============================================================== -->
+    <div class="profile-text"><a [matMenuTriggerFor]="sdprofile" class=""> {{user_name}} <i class="ti-angle-down font-12 m-l-5"></i></a></div>
+    
+</div>
+<mat-nav-list appAccordion>
+  <div *ngFor="let menuitem of menuItems.getMenuitem()" >
+    <mat-list-item appAccordionLink routerLinkActive="selected" group="{{menuitem.state}}" *ngIf="toDisplay(menuitem)">
+        <a class="" appAccordionToggle [routerLink]="['/', menuitem.state]" *ngIf="menuitem.type === 'link'">
+            <mat-icon>{{ menuitem.icon }}</mat-icon> 
+            <span>{{ menuitem.name }}</span> 
+            <span fxFlex></span> 
+            <span class="label label-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value }}</span> 
+        </a>
+    </mat-list-item>
+ </div>
+
+</mat-nav-list>

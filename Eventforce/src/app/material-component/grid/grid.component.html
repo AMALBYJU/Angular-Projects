@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../../../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Events
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="../../../assets/css/material-kit.css?v=2.0.4" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../../../assets/demo/demo.css" rel="stylesheet" />
+</head>
+
+<body class="landing-page sidebar-collapse">
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" >
+          Events </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto">
+  
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="" target="_blank" data-original-title="Like us on Facebook">
+              <i class="fa fa-facebook-square"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="" target="_blank" data-original-title="Follow us on Instagram">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('../../../assets/img/bg7.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="title">Events</h1>
+          <h4>Our event management system is robust and flexible enough to meet all your needs.</h4>
+          <br>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main main-raised">
+    <div class="container">
+ 
+      <div class="section text-center">
+// Beginning of table
+        <div class="section section-contacts">
+          <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+              <h2 class="text-center title">Add Event</h2>
+              <h4 class="text-center description"></h4>
+              <form class="contact-form" novalidate #empForm="ngForm">
+                <div class="row">
+                  <div class="col-md-6">
+                    <!-- <div class="form-group">
+                      <label class="bmd-label-floating">Event Name</label>
+                      <input type="email" class="form-control">
+                    </div> -->
+                    <mat-form-field>
+                        <input matInput placeholder="Event Name" type="text" [(ngModel)]="event.name" name="name" #name="ngModel" required maxlength="25">
+                        <mat-error *ngIf="name.errors?.required">Name is required</mat-error>
+                        <mat-error *ngIf="name.errors?.maxlength">Max length is 25 characters</mat-error>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-md-6">
+                    <mat-form-field>
+                        <input matInput placeholder="Venue" type="text" [(ngModel)]="event.venue" name="venue" #venue="ngModel" required maxlength="25">
+                        <mat-error *ngIf="venue.errors?.required">Venue is required</mat-error>
+                        <mat-error *ngIf="venue.errors?.maxlength">Max length is 25 characters</mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- <div class="form-group">
+                          <label>Event Date</label>
+                          <input type="date" class="form-control">
+                        </div> -->
+                        <mat-form-field>
+                            <input matInput placeholder="Category" type="text" [(ngModel)]="event.category" name="category" #category="ngModel" required maxlength="25">
+                            <mat-error *ngIf="category.errors?.required">Category is required</mat-error>
+                            <mat-error *ngIf="category.errors?.maxlength">Max length is 25 characters</mat-error>
+                        </mat-form-field>
+                      </div>
+                      <div class="col-md-6">
+                          <!-- <div class="form-group">
+                            <label class="bmd-label-floating">Venue</label>
+                            <input type="email" class="form-control">
+                          </div> -->
+                          <mat-form-field>
+                              <input matInput placeholder="Date" type="date" [(ngModel)]="event.date" name="date" #date="ngModel" required>
+                              <mat-error *ngIf="venue.errors?.required">Date is required</mat-error>                              
+                          </mat-form-field>
+                      </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <!-- <div class="form-group">
+                      <label >Event Start</label>
+                      <input type="time" class="form-control">
+                    </div> -->
+                    <mat-form-field>
+                        <input matInput placeholder="Start time" type="time" [(ngModel)]="event.start_time" name="start_time" #start_time="ngModel" required>
+                        <mat-error *ngIf="start_time.errors?.required">Venue is required</mat-error>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-md-6">
+                      <!-- <div class="form-group">
+                        <label >Event End</label>
+                        <input type="time" class="form-control">
+                      </div> -->
+                      <mat-form-field>
+                          <input matInput placeholder="End time" type="time" [(ngModel)]="event.end_time" name="end_time" #end_time="ngModel" required>
+                          <mat-error *ngIf="end_time.errors?.required">End time is required</mat-error>
+                      </mat-form-field>
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                      <!-- <div class="form-group">
+                        <label >Event Start</label>
+                        <input type="time" class="form-control">
+                      </div> -->
+                      <mat-form-field>
+                          <input matInput placeholder="Max registrations" type="text" [(ngModel)]="event.max_registrations" name="max_registrations" #max_registrations="ngModel" required>
+                          <mat-error *ngIf="max_registrations.errors?.required">Max registrations is required</mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                
+                <!-- <div class="form-group">
+                  <label for="exampleMessage" class="bmd-label-floating">Organiser Description</label>
+                  <textarea type="email" class="form-control" rows="4" id="exampleMessage"></textarea>                  
+                </div> -->
+                  <mat-form-field>
+                    <textarea rows="4" matInput placeholder="Organizer Description" type="text" [(ngModel)]="event.org_desc" name="org_desc" #org_desc="ngModel" required></textarea>
+                    <mat-error *ngIf="org_desc.errors?.required">Organizer description is required</mat-error>
+                  </mat-form-field>
+                <!-- <div class="form-group">
+                    <label for="exampleMessage" class="bmd-label-floating">Event Description</label>
+                    <textarea type="email" class="form-control" rows="4" id="exampleMessage"></textarea>
+                </div> -->
+                <mat-form-field>
+                    <textarea rows="4" matInput placeholder="Event Description" type="text" [(ngModel)]="event.event_desc" name="event_desc" #event_desc="ngModel" required></textarea>
+                    <mat-error *ngIf="event_desc.errors?.required">Event description is required</mat-error>
+                </mat-form-field>
+               <!--  <div class="row">
+                    <div class="text-center">
+                        <img src="../../../assets/images/events/default.jpg" style="height: 200px;width: 200px;border-radius: 50%" alt="Image will show up here...Change height and width if you wish to">
+                          <br><br>
+                          <input class="btn btn-primary" type="file" title="enter image" value="" [(ngModel)]="event.image" name="image" #image="ngModel">
+                    </div>
+                </div> -->  
+                <div class="row">
+                  <div class="col-md-4 ml-auto mr-auto text-center">
+                    <button class="btn btn-primary btn-raised" (click)="submitEvent()">
+                      Add Event
+                    </button>
+                  </div> 
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+// End of Table
+      </div>
+    </div>
+  </div>
+  <footer class="footer footer-default">
+    <div class="container">
+      <nav class="float-left">
+      </nav>
+      <div class="copyright float-right">
+        &copy;
+        <script>
+          document.write(new Date().getFullYear())
+        </script>, made with <i class="material-icons">favorite</i>
+      </div>
+    </div>
+  </footer>
+  <!--   Core JS Files   -->
+  <script src="../../../assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="../../../assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="../../../assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+  <script src="../../../assets/js/plugins/moment.min.js"></script>
+  <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+  <script src="../../../assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../../../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <!--	Plugin for Sharrre btn -->
+  <script src="../../../assets/js/plugins/jquery.sharrre.js" type="text/javascript"></script>
+  <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+  <script src="../../../assets/js/material-kit.js?v=2.0.4" type="text/javascript"></script>
+</body>
+
+</html>

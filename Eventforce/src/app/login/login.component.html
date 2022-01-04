@@ -1,0 +1,38 @@
+<mat-tab-group mat-stretch-tabs [dynamicHeight]="true">
+  <mat-tab label="ORGANIZER" width="100%" height="100%">
+    <div >
+      <div color="white" width="100%">
+          <h2 matLine>Organizer Login</h2>
+          <br>
+          <br>
+      </div>
+
+      <form novalidate #loginForm="ngForm" width="100%"> 
+        <mat-dialog-content>
+          <p>
+            <mat-form-field>
+              <input matInput type="text" placeholder="Username" [(ngModel)]="user.username" name="username" #username="ngModel" required maxlength="28">
+              <mat-error *ngIf="username.errors?.required">Username is required</mat-error>
+              <mat-error *ngIf="username.errors?.maxlength">Maximum length is 28 characters</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="password" placeholder="Password" [(ngModel)]="user.password" name="password" #password="ngModel" required maxlength="33"> 
+              <mat-error *ngIf="password.errors?.required">Password is required</mat-error>
+              <mat-error *ngIf="password.errors?.maxlength">Maximum length is 33 characters</mat-error>
+            </mat-form-field>
+            <mat-checkbox [(ngModel)]="user.remember" name="remember">Remember Me</mat-checkbox>
+          </p>
+        </mat-dialog-content>
+        <mat-dialog-actions>
+          <span class="flex-spacer"></span>
+          <button mat-button mat-dialog-close>Cancel</button>
+          <button mat-button class="background-primary text-floral-white" [disabled]="loginForm.form.invalid" (click)="onLoginOrg()">Login</button>
+        </mat-dialog-actions>
+        
+      </form>
+    </div>
+  </mat-tab>
+  <mat-tab label="STUDENT" width="100%" height="100%"> 
+    <app-login-emp width="100%"></app-login-emp>
+  </mat-tab>
+</mat-tab-group>

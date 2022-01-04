@@ -1,0 +1,35 @@
+.demo-tab-group {
+  border: 1px solid #e8e8e8;
+}
+
+.demo-tab-content {
+  padding: 24px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100% !important;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 3px;
+  height:20px;
+
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+.full-width {
+  width: 100% !important;
+}
+
+.flex-spacer
+{
+flex:1 1 auto;
+}

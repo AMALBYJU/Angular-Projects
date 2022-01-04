@@ -1,0 +1,4 @@
+Major updates in conFusion
+
+1. Converted Promises to Observables
+-- Promise can emit only one value, where Observables can continue emitting values.

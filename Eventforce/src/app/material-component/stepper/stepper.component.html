@@ -1,0 +1,24 @@
+<!-- ============================================================== -->
+<!-- row -->
+<!-- ============================================================== -->
+<div fxLayout="row" fxLayoutWrap="wrap">
+    <!-- Card column -->
+    <div fxFlex.gt-sm="100%" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+              <div *ngIf="events">
+                <mat-grid-list cols = 2 rowHeight = 400px>
+                  <mat-grid-tile *ngFor = "let event of events" [routerLink]="['/studentlist', event.id]">
+                    <img height = 400px src = "../../../assets/images/events/{{event.id}}.jpg" alt = "{{event.name}}">
+                    <mat-grid-tile-footer>
+                      <h1>{{event.name | uppercase}}</h1>
+                    </mat-grid-tile-footer>
+                  </mat-grid-tile>
+                </mat-grid-list>
+              </div>            
+            </mat-card-content>
+             
+        </mat-card>    
+    </div>
+</div>
+
